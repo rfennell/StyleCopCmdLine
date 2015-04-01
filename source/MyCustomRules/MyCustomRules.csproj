@@ -4,12 +4,12 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{593DB02E-3578-4A41-93EE-7DA9C61B8844}</ProjectGuid>
+    <ProjectGuid>{DA400DA1-232D-4098-B780-927FDEB7AC90}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>CustomStyleCopRule</RootNamespace>
-    <AssemblyName>CustomStyleCopRule</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <RootNamespace>MyCustomRules</RootNamespace>
+    <AssemblyName>MyCustomRules</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -31,22 +31,24 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="StyleCop">
-      <HintPath>..\..\..\Program Files (x86)\StyleCop 4.7\StyleCop.dll</HintPath>
+      <HintPath>..\..\..\..\..\Program Files (x86)\StyleCop 4.7\StyleCop.dll</HintPath>
     </Reference>
     <Reference Include="StyleCop.CSharp">
-      <HintPath>..\..\..\Program Files (x86)\StyleCop 4.7\StyleCop.CSharp.dll</HintPath>
+      <HintPath>..\..\..\..\..\Program Files (x86)\StyleCop 4.7\StyleCop.CSharp.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AddinRule.cs" />
+    <Compile Include="MyCustomAnalyzer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="MyCustomAnalyzer.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

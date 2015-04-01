@@ -11,7 +11,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StyleCopWrapper.Tests", "St
 EndProject
 Project("{F5034706-568F-408A-B7B3-4D38C6DB8A32}") = "PowerShellWrapper", "PowerShellWrapper\PowerShellWrapper.pssproj", "{6CAFC0C6-A428-4D30-A9F9-700E829FEA51}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomStyleCopRule", "CustomStyleCopRule\CustomStyleCopRule.csproj", "{593DB02E-3578-4A41-93EE-7DA9C61B8844}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyCustomRules", "MyCustomRules\MyCustomRules.csproj", "{DA400DA1-232D-4098-B780-927FDEB7AC90}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,10 +35,10 @@ Global
 		{6CAFC0C6-A428-4D30-A9F9-700E829FEA51}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6CAFC0C6-A428-4D30-A9F9-700E829FEA51}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6CAFC0C6-A428-4D30-A9F9-700E829FEA51}.Release|Any CPU.Build.0 = Release|Any CPU
-		{593DB02E-3578-4A41-93EE-7DA9C61B8844}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{593DB02E-3578-4A41-93EE-7DA9C61B8844}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{593DB02E-3578-4A41-93EE-7DA9C61B8844}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{593DB02E-3578-4A41-93EE-7DA9C61B8844}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DA400DA1-232D-4098-B780-927FDEB7AC90}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA400DA1-232D-4098-B780-927FDEB7AC90}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA400DA1-232D-4098-B780-927FDEB7AC90}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA400DA1-232D-4098-B780-927FDEB7AC90}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

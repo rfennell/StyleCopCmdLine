@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("CustomStyleCopRule")]
+[assembly: AssemblyTitle("MyCustomRules")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("CustomStyleCopRule")]
+[assembly: AssemblyProduct("MyCustomRules")]
 [assembly: AssemblyCopyright("Copyright ©  2015")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("f5b460e3-cb09-47bf-b3f2-c3f48c524088")]
+[assembly: Guid("591d0e14-f1eb-4dff-be3b-1e77cc4aeb5d")]
 
 // Version information for an assembly consists of the following four values:
 //

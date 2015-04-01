@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<SourceAnalyzer Name="My Custom Rule">
+  <Description>
+    Custom rule for demo purposes.
+  </Description>
+  <Rules>
+    <Rule Name="AvoidUsingAInClassNames" CheckId="CR0001">
+      <Context>Do not use 'a' letter in {0} names.</Context>
+      <Description>Fires when 'a' letter is used in class name.</Description>
+    </Rule>
+  </Rules>
+</SourceAnalyzer>

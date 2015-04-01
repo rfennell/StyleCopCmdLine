@@ -20,7 +20,7 @@
             {
                 SourceFiles = new string[] { @"TestFiles\FileWith7Errors.cs" },
                 SettingsFile = @"TestFiles\AllSettingsEnabled.StyleCop",
-                AdditionalAddInPaths = new string[] { @"C:\Program Files (x86)\StyleCop 4.7", @"..\..\..\CustomStyleCopRule\bin\Debug" }, // the directory cannot be a sub directory of current as this is automatically scanned
+                AdditionalAddInPaths = new string[] { @"C:\Program Files (x86)\StyleCop 4.7", @"..\..\..\MyCustomRules\bin\Debug" }, // the directory cannot be a sub directory of current as this is automatically scanned
             };
 
             // act
