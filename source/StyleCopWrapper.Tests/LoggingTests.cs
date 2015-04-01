@@ -57,89 +57,74 @@
             Assert.AreEqual(1, monitor.Writes);
         }
 
-        //[TestMethod]
-        //public void Can_choose_to_not_list_a_file_added_in_the_build_log()
-        //{
-        //    // arrange
-        //    var monitor = new DebugMonitor("Adding file to check");
-        //    Trace.Listeners.Add(monitor);
+        [TestMethod]
+        public void Can_choose_to_not_list_a_file_added_in_the_build_log()
+        {
+            // arrange
+            var monitor = new DebugMonitor("Adding file to check");
+            Trace.Listeners.Add(monitor);
 
-        //    // create the activity
-        //    var target = new StyleCop();
+            // create the activity
+            var target = new StyleCopWrapper.Wrapper()
+            {
+                SourceFiles = new string[] { @"TestFiles\FileWith7Errors.cs" },
+                SettingsFile = @"TestFiles\AllSettingsEnabled.StyleCop",
+                AdditionalAddInPaths = new string[] { @"C:\Program Files (x86)\StyleCop 4.7" },
+                ShowOutput = false
+            };
 
-        //    // create a parameter set
-        //    Dictionary<string, object> args = new Dictionary<string, object>
-        //    {
-        //        { "SourceFiles", new string[] { @"TestFiles\FileWith6Errors.cs" } },
-        //        { "SettingsFile", @"TestFiles\AllSettingsEnabled.StyleCop" },
-        //        { "ShowOutput", false }
-        //    };
+            // act
+            target.Scan();
 
-        //    // Create a WorkflowInvoker and add the IBuildDetail Extension
-        //    WorkflowInvoker invoker = new WorkflowInvoker(target);
+            // assert
+            Assert.AreEqual(0, monitor.Writes);
+        }
 
-        //    // act
-        //    var results = invoker.Invoke(args);
+        [TestMethod]
+        public void Can_choose_to_not_list_a_directory_of_files_added_in_the_build_log()
+        {
+            // arrange
+            var monitor = new DebugMonitor("Adding file to check");
+            Trace.Listeners.Add(monitor);
 
-        //    // assert
-        //    Assert.AreEqual(0, monitor.Writes);
-        //}
+            // create the activity
+            var target = new StyleCopWrapper.Wrapper()
+            {
+                SourceFiles = new string[] { @"TestFiles" },
+                SettingsFile = @"TestFiles\AllSettingsEnabled.StyleCop",
+                AdditionalAddInPaths = new string[] { @"C:\Program Files (x86)\StyleCop 4.7" },
+                ShowOutput = false
+            };
 
-        //[TestMethod]
-        //public void Can_choose_to_not_list_a_directory_of_files_added_in_the_build_log()
-        //{
-        //    // arrange
-        //    var monitor = new DebugMonitor("Adding file to check");
-        //    Trace.Listeners.Add(monitor);
+            // act
+            target.Scan();
 
-        //    // create the activity
-        //    var target = new StyleCop();
+            // assert
+            Assert.AreEqual(0, monitor.Writes);
+        }
 
-        //    // create a parameter set
-        //    Dictionary<string, object> args = new Dictionary<string, object>
-        //    {
-        //        { "SourceFiles", new string[] { @"TestFiles" } },
-        //        { "SettingsFile", @"TestFiles\AllSettingsEnabled.StyleCop" },
-        //        { "ShowOutput", false }
-        //    };
+        [TestMethod]
+        public void Can_choose_to_list_a_directory_of_files_added_in_the_build_log()
+        {
+            // arrange
+            var monitor = new DebugMonitor("Adding file to check");
+            Trace.Listeners.Add(monitor);
 
-        //    // Create a WorkflowInvoker and add the IBuildDetail Extension
-        //    WorkflowInvoker invoker = new WorkflowInvoker(target);
+            // create the activity
+            var target = new StyleCopWrapper.Wrapper()
+            {
+                SourceFiles = new string[] { @"TestFiles" },
+                SettingsFile = @"TestFiles\AllSettingsEnabled.StyleCop",
+                AdditionalAddInPaths = new string[] { @"C:\Program Files (x86)\StyleCop 4.7" },
+                ShowOutput = true
+            };
 
-        //    // act
-        //    var results = invoker.Invoke(args);
+            // act
+            target.Scan();
 
-        //    // assert
-        //    Assert.AreEqual(0, monitor.Writes);
-        //}
-
-        //[TestMethod]
-        //public void Can_choose_to_list_a_directory_of_files_added_in_the_build_log()
-        //{
-        //    // arrange
-        //    var monitor = new DebugMonitor("Adding file to check");
-        //    Trace.Listeners.Add(monitor);
-
-        //    // create the activity
-        //    var target = new StyleCop();
-
-        //    // create a parameter set
-        //    Dictionary<string, object> args = new Dictionary<string, object>
-        //    {
-        //        { "SourceFiles", new string[] { @"TestFiles" } },
-        //        { "SettingsFile", @"TestFiles\AllSettingsEnabled.StyleCop" },
-        //        { "ShowOutput", true }
-        //    };
-
-        //    // Create a WorkflowInvoker and add the IBuildDetail Extension
-        //    WorkflowInvoker invoker = new WorkflowInvoker(target);
-
-        //    // act
-        //    var results = invoker.Invoke(args);
-
-        //    // assert
-        //    Assert.AreEqual(3, monitor.Writes);
-        //}
+            // assert
+            Assert.AreEqual(3, monitor.Writes);
+        }
 #endif
 
         [TestMethod]

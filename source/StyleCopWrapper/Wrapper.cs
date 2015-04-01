@@ -8,6 +8,7 @@ namespace StyleCopWrapper
     using System.IO;
     using System.Text;
     using global::StyleCop;
+    using System.Diagnostics;
 
     public class Wrapper
     {
@@ -140,7 +141,8 @@ namespace StyleCopWrapper
             if (this.SourceFiles == null)
             {
                 throw new ArgumentException("The list of source files must be specified");
-            } else
+            }
+            else
             {
                 foreach (var inputSourceLocation in this.SourceFiles)
                 {
@@ -149,6 +151,7 @@ namespace StyleCopWrapper
                     {
                         if (this.ShowOutput)
                         {
+                            Debug.WriteLine("Adding file to check [{0}]", inputSourceLocation);
                             Console.WriteLine("Adding file to check [{0}]", inputSourceLocation);
                         }
 
@@ -160,6 +163,7 @@ namespace StyleCopWrapper
                         {
                             if (this.ShowOutput)
                             {
+                                Debug.WriteLine("Adding file to check [{0}]", fileInDirectory);
                                 Console.WriteLine("Adding file to check [{0}]", fileInDirectory);
                             }
 
