@@ -6,27 +6,64 @@
     {
         static void Main(string[] args)
         {
-            var scanner = new StyleCopWrapper.Wrapper()
+            var options = new Options();
+            try
             {
-                MaximumViolationCount = 1000,
-                ShowOutput = true,
-                CacheResults = false,
-                ForceFullAnalysis = true,
-                XmlOutputFile = "out.xml",
-                LogFile = "log.txt",
-                SourceFiles = new string[] { @"C:\projects\github\CustomActivities\Source\Tests\Activities.StyleCop.Tests\TestFiles\FileWith7Errors.cs" },
-                SettingsFile = @"C:\projects\github\CustomActivities\Source\Tests\Activities.StyleCop.Tests\TestFiles\AllSettingsEnabled.StyleCop",
-                AdditionalAddInPaths = new string[] { @"C:\Program Files (x86)\StyleCop 4.7" },
-                TreatViolationsErrorsAsWarnings = false
-            };
+                if (CommandLine.Parser.Default.ParseArguments(args, options))
+                {
+                    // Values are available here
+                    if (options.Verbose)
+                    {
+                        Console.WriteLine(options.GetUsage());
+                        
+                        Console.WriteLine("SourceFiles: {0}", options.SourceFiles);
+                        Console.WriteLine("SettingsFile: {0}", options.SettingsFile);
+                        Console.WriteLine("MaximumViolationCount: {0}", options.MaximumViolationCount);
+                        Console.WriteLine("ShowOutput: {0}", options.ShowOutput);
+                        Console.WriteLine("CacheResults: {0}", options.CacheResults);
+                        Console.WriteLine("ForceFullAnalysis: {0}", options.ForceFullAnalysis);
+                        Console.WriteLine("XmlOutputFile: {0}", options.XmlOutputFile);
+                        Console.WriteLine("LogFile: {0}", options.LogFile);
+                        Console.WriteLine("TreatViolationsErrorsAsWarnings: {0}", options.TreatViolationsErrorsAsWarnings);
+                        Console.WriteLine("AdditionalAddInPaths: {0}", options.AdditionalAddInPaths);
 
-            scanner.Scan();
 
-            Console.WriteLine("Succeeded [{0}]", scanner.Succeeded);
-            Console.WriteLine("Violation count [{0}]", scanner.ViolationCount);
-            Console.WriteLine("Press any key to continue");
-            Console.ReadLine();
+                        Console.WriteLine(Environment.NewLine);
+
+                    }
+
+                    var scanner = new StyleCopWrapper.Wrapper()
+                    {
+                        MaximumViolationCount = options.MaximumViolationCount,
+                        ShowOutput = options.ShowOutput,
+                        CacheResults = options.CacheResults,
+                        ForceFullAnalysis = options.ForceFullAnalysis,
+                        XmlOutputFile = options.XmlOutputFile,
+                        LogFile = options.LogFile,
+                        SourceFiles = options.SourceFiles,
+                        SettingsFile = options.SettingsFile,
+                        AdditionalAddInPaths =options.AdditionalAddInPaths,
+                        TreatViolationsErrorsAsWarnings = options.TreatViolationsErrorsAsWarnings
+                    };
+
+                    scanner.Scan();
+
+                    Console.WriteLine("Succeeded [{0}]", scanner.Succeeded);
+                    Console.WriteLine("Violation count [{0}]", scanner.ViolationCount);
+                    
+                }
+            }
+            catch (CommandLine.ParserException ex)
+            {
+                Console.WriteLine("StyleCopCmdLine: Parameter error");
+                Console.WriteLine(ex.Message);
+                if (ex.InnerException != null)
+                {
+                    Console.WriteLine(ex.InnerException.Message);
+                }
+            }
+          
         }
     }
-     
+
 }
