@@ -28,7 +28,8 @@
   </PropertyGroup>
   <ItemGroup />
   <ItemGroup>
-    <Compile Include="Script.ps1" />
+    <Compile Include="SimpleScript.ps1" />
+    <Compile Include="TFSvNextBuildScipt.ps1" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Target Name="Build" />
