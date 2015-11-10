@@ -20,7 +20,7 @@
             {
                 SourceFiles = new string[] { @"TestFiles\FileWith7Errors.cs" },
                 SettingsFile = @"TestFiles\AllSettingsEnabled.StyleCop",
-                AdditionalAddInPaths = new string[] { @"C:\Program Files (x86)\StyleCop 4.7" },
+                AdditionalAddInPaths = new string[] { @"\bin\Debug" },
                 CacheResults = true,
             };
 
@@ -46,7 +46,7 @@
             {
                 SourceFiles = new string[] { @"TestFiles\FileWith7Errors.cs" },
                 SettingsFile = @"TestFiles\AllSettingsEnabled.StyleCop",
-                AdditionalAddInPaths = new string[] { @"C:\Program Files (x86)\StyleCop 4.7" },
+                AdditionalAddInPaths = new string[] { @"\bin\Debug" },
                 CacheResults = false,
             };
 

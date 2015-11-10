@@ -22,7 +22,7 @@
             {
                 SourceFiles = new string[] { @"TestFiles\FileWith7Errors.cs" },
                 SettingsFile = @"TestFiles\AllSettingsEnabled.StyleCop",
-                AdditionalAddInPaths = new string[] { @"C:\Program Files (x86)\StyleCop 4.7" }
+                AdditionalAddInPaths = new string[] { @"\bin\Debug" }
             };
 
             // act
@@ -45,7 +45,7 @@
             {
                 SourceFiles = new string[] { @"TestFiles\FileWith0Errors.cs" },
                 SettingsFile = @"TestFiles\AllSettingsEnabled.StyleCop",
-                AdditionalAddInPaths = new string[] { @"C:\Program Files (x86)\StyleCop 4.7" }
+                AdditionalAddInPaths = new string[] { @"\bin\Debug" }
             };
 
             // act
@@ -67,7 +67,7 @@
             {
                 SourceFiles = new string[] { @"TestFiles\FileWith7Errors.cs" },
                 SettingsFile = @"TestFiles\SettingsDisableSA1200.StyleCop",
-                AdditionalAddInPaths = new string[] { @"C:\Program Files (x86)\StyleCop 4.7" }
+                AdditionalAddInPaths = new string[] { @"\bin\Debug" }
             };
 
             // act
@@ -91,7 +91,7 @@
             {
                 SourceFiles = new string[] { @"TestFiles" },
                 SettingsFile = @"TestFiles\AllSettingsEnabled.StyleCop",
-                AdditionalAddInPaths = new string[] { @"C:\Program Files (x86)\StyleCop 4.7" }
+                AdditionalAddInPaths = new string[] { @"\bin\Debug" }
             };
 
             // act
@@ -116,7 +116,7 @@
             {
                 SourceFiles = new string[] { @"TestFiles" },
                 SettingsFile = @"TestFiles\AllSettingsEnabled.StyleCop",
-                AdditionalAddInPaths = new string[] { @"C:\Program Files (x86)\StyleCop 4.7" },
+                AdditionalAddInPaths = new string[] { @"\bin\Debug" },
                 LogFile = fileName
             };
 
@@ -137,7 +137,7 @@
             {
                 SourceFiles = new string[] { @"TestFiles" },
                 SettingsFile = @"TestFiles\AllSettingsEnabled.StyleCop",
-                AdditionalAddInPaths = new string[] { @"C:\Program Files (x86)\StyleCop 4.7" },
+                AdditionalAddInPaths = new string[] { @"\bin\Debug" },
                 MaximumViolationCount = 2
             };
 
