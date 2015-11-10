@@ -1,3 +1,4 @@
+![Build Status](https://richardfennell.visualstudio.com/DefaultCollection/_apis/public/build/definitions/670b3a60-2021-47ab-a88b-d76ebd888a2f/9/badge)
 # StyleCopCmdLine
 StyleCopCmdLine is a wrapper project to make it possible to easily call StyleCop from a command line or a PowerShell script.
 
