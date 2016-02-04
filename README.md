@@ -6,3 +6,4 @@ For more details on the usage see the [this repo's Wiki](https://github.com/rfen
 
 For a discussion of its usage within a TFS 2015 vNext build see [this blog post](http://blogs.blackmarble.co.uk/blogs/rfennell/post/2015/04/03/Running-StyleCop-from-the-command-line-and-in-a-TFS-2015-vNext-build.aspx)
 
+A true TFS vNext build task using this wrapper assembly can be found [in this repo](https://github.com/rfennell/vNextBuild)
