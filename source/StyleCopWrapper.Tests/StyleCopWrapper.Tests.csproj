@@ -76,7 +76,7 @@
     <Content Include="TestFiles\FileWith0Errors.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="TestFiles\FileWith2Errors.cs">
+    <Content Include="TestFiles\FileWith3Errors.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="TestFiles\FileWith7Errors.cs">

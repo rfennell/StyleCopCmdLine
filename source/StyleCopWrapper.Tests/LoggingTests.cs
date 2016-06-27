@@ -123,7 +123,7 @@
             target.Scan();
 
             // assert
-            Assert.AreEqual(3, monitor.Writes);
+            Assert.AreEqual(4, monitor.Writes);
         }
 #endif
 

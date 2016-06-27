@@ -99,7 +99,7 @@
 
             // assert
             Assert.AreEqual(false, target.Succeeded);
-            Assert.AreEqual(10, target.ViolationCount);
+            Assert.AreEqual(20, target.ViolationCount);
 
         }
 
@@ -125,7 +125,7 @@
 
             // assert
             Assert.IsTrue(System.IO.File.Exists(fileName));
-            Assert.AreEqual(10, System.IO.File.ReadAllLines(fileName).Length);
+            Assert.AreEqual(20, System.IO.File.ReadAllLines(fileName).Length);
         }
 
         [TestMethod]
