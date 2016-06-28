@@ -82,6 +82,7 @@
     <Content Include="TestFiles\FileWith7Errors.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="TestFiles\mssp7en.dll" />
     <Content Include="TestFiles\StyleCop.CSharp.Rules.dll" />
   </ItemGroup>
   <ItemGroup>
@@ -103,6 +104,7 @@
     <Content Include="TestFiles\SettingsOnlySA1650.StyleCop">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <None Include="TestFiles\mssp7en.lex" />
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
