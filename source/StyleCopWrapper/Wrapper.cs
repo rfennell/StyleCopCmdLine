@@ -194,8 +194,8 @@ namespace StyleCopWrapper
                 }
             }
 
-            // log the results to disk as a simple list if there have been failures AND LogFile is specified
-            if (string.IsNullOrEmpty(this.LogFile) == false && this.exitCode == false)
+            // log the results to disk as a simple list if LogFile is specified
+            if (string.IsNullOrEmpty(this.LogFile) == false)
             {
                 using (StreamWriter streamWriter = new StreamWriter(this.LogFile, false, Encoding.UTF8))
                 {

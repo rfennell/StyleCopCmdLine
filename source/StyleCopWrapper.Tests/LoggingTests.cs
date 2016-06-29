@@ -10,7 +10,7 @@
     public class LoggingTests
     {
         [TestMethod]
-        public void Check_a_file_with_no_issues_and_defaults_rules_will_not_create_a_text_logfile()
+        public void Check_a_file_with_no_issues_and_defaults_rules_will_create_a_text_logfile()
         {
             // arrange
             var fileName = "LogFile.Txt";
@@ -29,7 +29,7 @@
             target.Scan();
 
             // assert
-            Assert.IsFalse(System.IO.File.Exists(fileName));
+            Assert.IsTrue(System.IO.File.Exists(fileName));
         }
 
 #if DEBUG
