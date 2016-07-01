@@ -33,7 +33,49 @@
             Assert.AreEqual(7, target.ViolationCount);
         }
 
+        [TestMethod]
+        public void Check_a_maxviolationscount_used_when_violations_are_errors()
+        {
+            // arrange
+            // create the activity
+            var target = new StyleCopWrapper.Wrapper()
+            {
+                SourceFiles = new string[] { @"TestFiles\FileWith7Errors.cs" },
+                SettingsFile = @"TestFiles\AllSettingsEnabled.StyleCop",
+                AdditionalAddInPaths = new string[] { @"\bin\Debug" },
+                MaximumViolationCount = 3,
+                TreatViolationsErrorsAsWarnings = false
+            };
 
+            // act
+            target.Scan();
+
+            // assert
+            Assert.AreEqual(false, target.Succeeded);
+            Assert.AreEqual(3, target.ViolationCount);
+        }
+
+        [TestMethod]
+        public void Check_a_maxviolationscount_used_when_violations_are_warnings()
+        {
+            // arrange
+            // create the activity
+            var target = new StyleCopWrapper.Wrapper()
+            {
+                SourceFiles = new string[] { @"TestFiles\FileWith7Errors.cs" },
+                SettingsFile = @"TestFiles\AllSettingsEnabled.StyleCop",
+                AdditionalAddInPaths = new string[] { @"\bin\Debug" },
+                MaximumViolationCount = 3,
+                TreatViolationsErrorsAsWarnings = true
+            };
+
+            // act
+            target.Scan();
+
+            // assert
+            Assert.AreEqual(true, target.Succeeded);
+            Assert.AreEqual(3, target.ViolationCount);
+        }
 
 
         [TestMethod]
