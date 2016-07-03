@@ -100,6 +100,9 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Powershell Readme.md" />
+    <None Include="PowershellSmoke.tests.ps1" />
+    <None Include="PowershellSpelling.tests.ps1" />
     <None Include="packages.config" />
     <Content Include="TestFiles\SettingsOnlySA1650.StyleCop">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
