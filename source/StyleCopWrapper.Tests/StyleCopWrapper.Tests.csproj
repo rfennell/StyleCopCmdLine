@@ -71,6 +71,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StyleCopTests.cs" />
     <Compile Include="StyleCopDictionaryTests.cs" />
+    <Compile Include="TestFiles\FileWithLocalFunction.cs" />
     <Content Include="TestFiles\FileWithSA1650Errors.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
