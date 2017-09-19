@@ -1,5 +1,5 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="FileWith0Errors.cs" company="Dummy Company">
+// <copyright file="FileWithLocalFunction.cs" company="Dummy Company">
 //     Copyright (c) Dummy Company. All rights reserved.
 // </copyright>
 // <summary>
