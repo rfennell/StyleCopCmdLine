@@ -189,7 +189,26 @@
             // assert
             Assert.AreEqual(false, target.Succeeded);
             Assert.AreEqual(2, target.ViolationCount);
+        }
 
+        [TestMethod]
+        public void Check_a_single_file_with_local_function_shows_no_violations_and_passes()
+        {
+            // arrange
+            // create the activity
+            var target = new StyleCopWrapper.Wrapper()
+            {
+                SourceFiles = new string[] { @"TestFiles\FileWithLocalFunction.cs" },
+                SettingsFile = @"TestFiles\AllSettingsEnabled.StyleCop",
+                AdditionalAddInPaths = new string[] { @"\bin\Debug" }
+            };
+
+            // act
+            target.Scan();
+
+            // assert
+            Assert.AreEqual(true, target.Succeeded);
+            Assert.AreEqual(0, target.ViolationCount);
 
         }
     }
