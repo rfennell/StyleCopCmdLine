@@ -35,13 +35,11 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="StyleCop, Version=5.0.0.0, Culture=neutral, PublicKeyToken=f904653c63bc2738, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\StyleCop.MSBuild.5.0.0\tools\StyleCop.dll</HintPath>
+    <Reference Include="StyleCop">
+      <HintPath>..\packages\StyleCop.MSBuild.6.1.0\tools\StyleCop.dll</HintPath>
     </Reference>
-    <Reference Include="StyleCop.CSharp, Version=5.0.0.0, Culture=neutral, PublicKeyToken=f904653c63bc2738, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\StyleCop.MSBuild.5.0.0\tools\StyleCop.CSharp.dll</HintPath>
+    <Reference Include="StyleCop.CSharp">
+      <HintPath>..\packages\StyleCop.MSBuild.6.1.0\tools\StyleCop.CSharp.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
