@@ -1,3 +1,6 @@
+# THIS PROJECT IS NOT UNDER ACTIVE DEVELOPMENT 
+## AS RECOMMENDED ON [STYLECOP REPO](https://github.com/StyleCop/StyleCop) LOOK ELSEWHERE FOR ANALYSIS TOOLS AS STYLECOP IS BECOMING INCREASING HARD TO KEEP UP TOO DATE. [SONARQUBE](https://www.sonarqube.org) IS A GOOD FIRST PLACE TO LOOK
+
 ![Build Status](https://richardfennell.visualstudio.com/DefaultCollection/_apis/public/build/definitions/670b3a60-2021-47ab-a88b-d76ebd888a2f/9/badge)
 # StyleCopCmdLine
 StyleCopCmdLine is a wrapper project to make it possible to easily call StyleCop from a command line or a PowerShell script. It is (since 5.0.0.0) build against the version of [StyleCop on GitHub](https://github.com/StyleCop/StyleCop) as opposed to the older version on Codeplex.
